@@ -10,6 +10,7 @@ image:
   repository: 384570460482.dkr.ecr.ap-south-1.amazonaws.com
   name: instana/redis
   tag: v1
+imagePullPolicy: Always
 service:
   port: 6379
 resources:
