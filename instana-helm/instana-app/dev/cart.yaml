@@ -7,9 +7,10 @@ labels:
   version: v1
 replicaCount: 1
 image:
-  repository: siva9666
-  name: cart-instana
-  tag: monitoring-v1
+  repository: 384570460482.dkr.ecr.ap-south-1.amazonaws.com
+  name: roboshop/cart
+  tag: v1
+imagePullPolicy: Always
 resources:
   requests:
     memory: "128Mi"
