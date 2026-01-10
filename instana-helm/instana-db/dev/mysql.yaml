@@ -7,8 +7,8 @@ labels:
   tier: database
   version: v1
 image:
-  repository: siva9666
-  name: mysql-instana
+  repository: 384570460482.dkr.ecr.ap-south-1.amazonaws.com
+  name: instana/mysql
   tag: v1
 service:
   port: 3306

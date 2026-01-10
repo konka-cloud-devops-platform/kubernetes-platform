@@ -18,6 +18,7 @@ spec:
       containers:
         - name: {{ .Values.env }}-{{ .Values.name }}
           image: "{{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag}}"
+          imagePullPolicy: {{ .Values.image.pullPolicy | default "IfNotPresent" }}
           ports:
             - containerPort: {{ .Values.service.port }}
           resources:

@@ -7,9 +7,9 @@ labels:
   tier: database
   version: v1
 image:
-  repository: siva9666
-  name: mongo-instana
-  tag: monitoring-v1
+  repository: 384570460482.dkr.ecr.ap-south-1.amazonaws.com
+  name: instana/mongo
+  tag: v1
 service:
   port: 27017
 resources:
