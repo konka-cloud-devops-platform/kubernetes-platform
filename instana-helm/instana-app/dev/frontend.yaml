@@ -56,7 +56,7 @@ dns:
   hostname: "dev-instana.konkas.tech"
 
 service:
-  port: 80
+  port: 8080
 secrets:
   enabled: false
 configmap:
