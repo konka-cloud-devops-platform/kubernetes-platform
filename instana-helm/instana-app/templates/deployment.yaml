@@ -50,9 +50,9 @@ spec:
           {{- if eq .Values.name "frontend" }}
           volumeMounts:
             - name: {{ .Values.env }}-{{ .Values.name }}
-              # mountPath: /etc/nginx/nginx.conf
-              # subPath: NGINX_CONF
-              mountPath: /etc/nginx/
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+              
           {{- else }}
           envFrom:
             - configMapRef:
