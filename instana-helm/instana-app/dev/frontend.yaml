@@ -60,7 +60,7 @@ service:
 secrets:
   enabled: false
 configmap:
-  NGINX_CONF: |
+  nginx.conf: |
     worker_processes auto;
     pid /tmp/nginx.pid;
 
