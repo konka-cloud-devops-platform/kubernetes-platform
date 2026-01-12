@@ -47,7 +47,7 @@ spec:
             successThreshold: {{ .Values.probes.readiness.successThreshold }}   
             failureThreshold: {{ .Values.probes.readiness.failureThreshold }}         
           {{- end }}
-           {{- if eq .Values.name "frontend" }}
+          {{- if eq .Values.name "frontend" }}
           volumeMounts:
             - name: {{ .Values.env }}-{{ .Values.name }}
               # mountPath: /etc/nginx/nginx.conf
