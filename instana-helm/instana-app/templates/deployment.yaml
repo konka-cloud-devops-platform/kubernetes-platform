@@ -52,7 +52,7 @@ spec:
             - name: {{ .Values.env }}-{{ .Values.name }}
               # mountPath: /etc/nginx/nginx.conf
               # subPath: NGINX_CONF
-               mountPath: /etc/nginx/
+              mountPath: /etc/nginx/
           {{- else }}
           envFrom:
             - configMapRef:
