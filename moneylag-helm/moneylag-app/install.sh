@@ -15,15 +15,10 @@ install_or_upgrade() {
     fi
 }
 
-NAMESPACE="instana"
+NAMESPACE="moneylag"
 
-install_or_upgrade "catalogue" "." "dev/catalogue.yaml"
-install_or_upgrade "shipping" "." "dev/shipping.yaml"
-sleep 30
-install_or_upgrade "user" "." "dev/user.yaml"
-install_or_upgrade "cart" "." "dev/cart.yaml"
-install_or_upgrade "payment" "." "dev/payment.yaml"
-sleep 20
+install_or_upgrade "backend" "." "dev/backend.yaml"
+sleep 40
 install_or_upgrade "frontend" "." "dev/frontend.yaml"
 
 
