@@ -1,5 +1,4 @@
 #!/bin/bash
-git pull
 NAMESPACE="moneylag"
 install_or_upgrade() {
     RELEASE_NAME=$1

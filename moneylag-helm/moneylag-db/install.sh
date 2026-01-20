@@ -1,5 +1,4 @@
 #!/bin/bash
-git pull
 install_or_upgrade() {
     RELEASE_NAME=$1
     CHART_PATH=$2
