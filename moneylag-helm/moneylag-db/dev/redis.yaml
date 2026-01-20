@@ -7,10 +7,9 @@ labels:
   tier: database
   version: v1
 image:
-  repository: 384570460482.dkr.ecr.ap-south-1.amazonaws.com
-  name: redis
+  imageName: docker.io/redis
   tag: alpine3.22
-imagePullPolicy: Always
+  imagePullPolicy: Always
 service:
   port: 6379
 resources:
