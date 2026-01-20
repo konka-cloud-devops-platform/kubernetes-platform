@@ -7,8 +7,9 @@ labels:
   tier: database
   version: v1
 image:
-  imageName: docker.io/mysql
-  tag: 9.5.0
+  repository: siva9666
+  name: moneylag-mysql
+  tag: v2
   imagePullPolicy: Always
 service:
   port: 3306
