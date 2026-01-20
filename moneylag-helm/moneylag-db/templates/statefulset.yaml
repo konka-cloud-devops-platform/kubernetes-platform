@@ -30,7 +30,7 @@ spec:
       containers:
         - name: {{ .Values.env }}-{{ .Values.name }}
           # image: "{{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag }}"
-          image: docker pull mysql:9.5.0
+          image: mysql:9.5.0
           imagePullPolicy: {{ .Values.image.pullPolicy | default "IfNotPresent" }}
 
           ports:
