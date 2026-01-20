@@ -1,23 +1,23 @@
 env: dev
-name: user
+name: backend
 protocol: http
 labels:
-  app: user
+  app: backend
   tier: application
   version: v1
 replicaCount: 1
 image:
-  repository: 384570460482.dkr.ecr.ap-south-1.amazonaws.com
-  name: roboshop/user
-  tag: v1
-imagePullPolicy: Always
+  repository: siva9666
+  name: moneylag-backend
+  tag: v2
+  imagePullPolicy: Always
 resources:
   requests:
-    memory: "128Mi"
-    cpu: "50m"
+    memory: "1Gi"
+    cpu: "800m"
   limits:
-    memory: "256Mi"
-    cpu: "75m"
+    memory: "2Gi"
+    cpu: "1000m"
 health_check:
   path: /health
 probes:
@@ -36,12 +36,15 @@ probes:
     failureThreshold: 3 
 
 configmap:
-  MONGO: "true"
-  MONGO_URL: "mongodb://dev-mongo:27017/catalogue"
-  REDIS_HOST: "dev-redis"
+  DB_HOST: dev-mysql
+  DB_NAME: moneylag_app
+  REDIS_HOST: dev-redis
+  REDIS_SSL: "false"
+  FEATURE_UPDATE: "true"
+  FEATURE_DELETE_ALL: "true"
 hpa:
   minReplicas: 1
-  maxReplicas: 3
+  maxReplicas: 1
   metrics:
     - type: Resource
       resource:
@@ -53,7 +56,11 @@ service:
   port: 8080
 
 secrets:
-  enabled: false
-  
+  enabled: true
+  list:
+    - data:
+        DB_USER: moneylag
+        DB_PASSWORD: moneylagApp@1
+
 ingress:
   enabled: false
