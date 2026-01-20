@@ -14,13 +14,9 @@ install_or_upgrade() {
     fi
 }
 
-NAMESPACE="instana"
+NAMESPACE="moneylag"
 
-install_or_upgrade "mongo" "." "dev/mongo.yaml" 
-sleep 10
 install_or_upgrade "mysql" "." "dev/mysql.yaml"
-sleep 10
-install_or_upgrade "rabbitmq" "." "dev/rabbitmq.yaml"
 sleep 10
 install_or_upgrade "redis" "." "dev/redis.yaml"
 
