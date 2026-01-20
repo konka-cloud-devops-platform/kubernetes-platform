@@ -1,5 +1,6 @@
 #!/bin/bash
-NAMESPACE="instana"
+git pull
+NAMESPACE="moneylag"
 install_or_upgrade() {
     RELEASE_NAME=$1
     CHART_PATH=$2
@@ -14,8 +15,6 @@ install_or_upgrade() {
         helm install "$RELEASE_NAME" "$CHART_PATH" -f "$VALUES_FILE" -n "$NAMESPACE"
     fi
 }
-
-NAMESPACE="moneylag"
 
 install_or_upgrade "backend" "." "dev/backend.yaml"
 sleep 40
