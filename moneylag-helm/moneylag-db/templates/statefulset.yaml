@@ -63,11 +63,17 @@ spec:
           volumeMounts:
             - name: data-volume
               mountPath: {{ .Values.storage.mountPath }}
+
             {{- if .Values.mysql.enabled }}
             - name: mysql-schema
               mountPath: /docker-entrypoint-initdb.d
             {{- end }}
-
+      {{- if .Values.mysql.enabled }}
+        volumes:
+          - name: mysql-schema
+            configMap:
+              name: {{ .Values.env }}-{{ .Values.name }}-mysql-schema
+      {{- end }}
   volumeClaimTemplates:
     - metadata:
         name: data-volume
@@ -78,9 +84,4 @@ spec:
           requests:
             storage: {{ .Values.storage.size }}
         storageClassName: {{ .Values.storage.storageClassName }}
-      {{- if .Values.mysql.enabled }}
-        volumes:
-          - name: mysql-schema
-            configMap:
-              name: {{ .Values.env }}-{{ .Values.name }}-mysql-schema
-      {{- end }}
+      
