@@ -23,13 +23,13 @@ health_check:
 probes:
   enabled: true
   liveness:
-    initialDelaySeconds: 10    
+    initialDelaySeconds: 30   
     periodSeconds: 10            
     timeoutSeconds: 2            
     successThreshold: 1      
     failureThreshold: 3 
   readiness:
-    initialDelaySeconds: 10      
+    initialDelaySeconds: 30     
     periodSeconds: 10           
     timeoutSeconds: 2           
     successThreshold: 1
