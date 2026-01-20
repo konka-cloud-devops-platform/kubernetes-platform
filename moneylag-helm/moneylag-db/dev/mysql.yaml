@@ -6,10 +6,9 @@ labels:
   app: mysql
   tier: database
   version: v1
-# image:
-#   repository: 384570460482.dkr.ecr.ap-south-1.amazonaws.com
-#   name: mysql
-#   tag: 9.5.0
+image:
+  imageName: mysql
+  tag: 9.5.0
 imagePullPolicy: Always
 service:
   port: 3306

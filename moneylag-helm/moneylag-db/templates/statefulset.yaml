@@ -29,7 +29,8 @@ spec:
 
       containers:
         - name: {{ .Values.env }}-{{ .Values.name }}
-          image: mysql:9.5.0
+          # image: "{{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.imageName }}:{{ .Values.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy | default "IfNotPresent" }}
 
           ports:
