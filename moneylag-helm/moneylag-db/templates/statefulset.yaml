@@ -24,7 +24,7 @@ spec:
       volumes:
         - name: mysql-schema
           configMap:
-            name: {{ .Values.env }}-{{ .Values.name }}-mysql-schema
+            name: {{ .Values.env }}-{{ .Values.name }}-schema
       {{- end }}
 
       containers:
