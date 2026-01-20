@@ -42,7 +42,7 @@ probes:
     timeoutSeconds: 5
     failureThreshold: 3
 secrets:
-  enabled: false
+  enabled: true
   list:
     - data:
         MYSQL_ROOT_PASSWORD: "RoboShop@1"
