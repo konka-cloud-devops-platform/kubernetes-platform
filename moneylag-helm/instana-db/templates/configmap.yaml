@@ -1,0 +1,11 @@
+{{- if .Values.mysql.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.env }}-{{ .Values.name }}-mysql-schema
+  labels:
+    {{- toYaml .Values.labels | nindent 4 }}
+data:
+  init.sql: |
+    {{- .Files.Get "dev/init.sql" | nindent 4 }}
+{{- end }}
