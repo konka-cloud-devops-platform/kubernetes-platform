@@ -7,8 +7,8 @@ labels:
   version: v1
 replicaCount: 1
 image:
-  repository: 384570460482.dkr.ecr.ap-south-1.amazonaws.com
-  name: roboshop/payment
+  repository: siva9666
+  name: instana-payment
   tag: v1
 imagePullPolicy: Always
 resources:

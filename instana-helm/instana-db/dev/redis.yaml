@@ -7,7 +7,7 @@ labels:
   tier: database
   version: v1
 image:
-  repository: 384570460482.dkr.ecr.ap-south-1.amazonaws.com
+  repository: docker.io
   name: redis
   tag: alpine3.22
 imagePullPolicy: Always

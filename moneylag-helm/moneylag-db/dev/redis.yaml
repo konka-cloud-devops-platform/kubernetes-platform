@@ -7,10 +7,6 @@ labels:
   tier: database
   version: v1
 image:
-  imageName: docker.io/redis
-  tag: alpine3.22
-  imagePullPolicy: Always
-image:
   repository: docker.io
   name: redis
   tag: alpine3.22
